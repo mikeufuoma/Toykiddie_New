@@ -55,9 +55,10 @@ const Profile = () => {
                   <Ionicons name={'arrow-back-sharp'} size={width / 15} style={{ color: "#061237" }} />
                 </TouchableOpacity>
                 <Text style={{ color:"#061237", fontSize:width/20, fontWeight:"bold" }}>Personal Details</Text>
-                <TouchableOpacity>
+                  <TouchableOpacity onPress={logout}>
+                     <Text style={{fontSize:width/30, color: "#4A5CD0"}}>Log Out</Text>
+                  </TouchableOpacity>
                   {/* <Feather  onPress={()=> setActive('edit')} name={'edit'} size={width / 20} style={{ color: "#423573" }} /> */}
-                </TouchableOpacity>
               </View>
 
               <View style={styles.profBox}>
@@ -68,9 +69,6 @@ const Profile = () => {
                           uri: `${configData.PIC_URL}/${state.profImage}`
                           }} alt="profile" style={{marginBottom:width/80}}/>
                      <Text style={{fontSize:width/25, color: "#000"}}>{state.firstName} {state.lastName}</Text>
-                  <TouchableOpacity onPress={logout}>
-                     <Text style={{fontSize:width/30, color: "#4A5CD0"}}>Log Out</Text>
-                  </TouchableOpacity>
                 </View>
                  <LinearGradient colors={['#6654A8', '#423573']} style={styles.detailSec}>
                     <View>
