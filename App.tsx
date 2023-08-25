@@ -11,6 +11,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SplashScreen from 'react-native-splash-screen';
 import { NativeBaseProvider } from "native-base";
 
+import { LogBox } from "react-native";
+
 const Stack = createStackNavigator();
 import Store from './Store';
 import IntroScreen from './src/IntroScreen';
@@ -31,8 +33,10 @@ import ChatDetails from './src/pages/Tabs/Screens/ChatDetails';
 import MainChat from './src/pages/Tabs/Screens/MainChat';
 import GiftRequest from './src/pages/Tabs/Screens/GiftRequest';
 import RequestMessage from './src/pages/Tabs/Screens/RequestMessage';
+  
 
 function App() {
+  LogBox.ignoreAllLogs(true);
 
   useEffect(() => {
     SplashScreen.hide();
