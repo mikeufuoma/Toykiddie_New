@@ -33,6 +33,7 @@ import ChatDetails from './src/pages/Tabs/Screens/ChatDetails';
 import MainChat from './src/pages/Tabs/Screens/MainChat';
 import GiftRequest from './src/pages/Tabs/Screens/GiftRequest';
 import RequestMessage from './src/pages/Tabs/Screens/RequestMessage';
+
   
 
 function App() {
@@ -48,6 +49,9 @@ function App() {
     <NativeBaseProvider>
         <NavigationContainer>
           <Stack.Navigator initialRouteName="Splash">
+                  <Stack.Screen name="Pin" component={Pin} 
+                          options={{headerShown: false}}/>
+
                   <Stack.Screen name="Splash" component={Splash} 
                       options={{headerShown: false}}/>
                   <Stack.Screen name="IntroScreen" component={IntroScreen} options={{headerShown: false}}/>

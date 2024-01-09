@@ -146,7 +146,7 @@ const Register = () => {
           setIsLoading(false);
           navigation.navigate('Success', {
               nav: "Preference",
-              msg:"You have updated your profile on ToyKiddies successful"
+              msg:"The phone number you provided was verified successfully."
             });
          }
          if(responseJson.status === "error"){
@@ -171,11 +171,9 @@ const Register = () => {
 
       {isLoading ? <>
           
-        <View style={{
-             flex: 1, width: '100%',
+        <View style={{ flex: 1, width: '100%',
              backgroundColor: '#fff',opacity: 0.7,
-            justifyContent:'center',
-            alignItems:'center' }}>
+            justifyContent:'center', alignItems:'center' }}>
                  <Image source={require('../../assets/images/toykiddieIcon.png')} style={{ resizeMode: 'contain'}} alt="toykiddieIcon" />
                  <Spinner color='#6654A8' style={{fontSize:width/2, marginTop:width/20 }}  />
             </View>
